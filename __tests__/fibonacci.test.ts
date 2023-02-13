@@ -40,6 +40,11 @@ describe("fibonacci-map", () => {
     }
   });
 
+  // This was a unit test for checking if it was really caching
+  // So it expect time to calculate fib without being cached is shorter
+  // than cached, but for some reason it sometimes throws, even though
+  // I checked that it is certainly caching
+
   // it("should cache properly", () => {
   //   for (let i = 0; i < 100; i++) {
   //     const fibonacci = createFibonacciWithMap();
@@ -94,6 +99,11 @@ describe("fibonacci-weakMap", () => {
       expect(createFibonacciWithWeakMap()(random)).toBe(result);
     }
   });
+
+  // This was a unit test for checking if it was really caching
+  // So it expect time to calculate fib without being cached is shorter
+  // than cached, but for some reason it sometimes throws, even though
+  // I checked that it is certainly caching
 
   // it("should cache properly", () => {
   //   for (let i = 0; i < 100; i++) {
