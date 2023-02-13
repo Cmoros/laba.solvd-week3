@@ -12,13 +12,21 @@ describe("fibonacci-map", () => {
   });
 
   it("should work with low numbers", () => {
-    const fibonacci = createFibonacciWithMap();
+    let fibonacci = createFibonacciWithMap();
     expect(fibonacci(2)).toBe(1);
     expect(fibonacci(3)).toBe(2);
     expect(fibonacci(4)).toBe(3);
     expect(fibonacci(5)).toBe(5);
     expect(fibonacci(6)).toBe(8);
     expect(fibonacci(7)).toBe(13);
+
+    fibonacci = createFibonacciWithMap();
+    expect(fibonacci(7)).toBe(13);
+    expect(fibonacci(6)).toBe(8);
+    expect(fibonacci(5)).toBe(5);
+    expect(fibonacci(4)).toBe(3);
+    expect(fibonacci(3)).toBe(2);
+    expect(fibonacci(2)).toBe(1);
   });
 
   it("should work with high numbers", () => {
@@ -59,13 +67,21 @@ describe("fibonacci-weakMap", () => {
   });
 
   it("should work with low numbers", () => {
-    const fibonacci = createFibonacciWithWeakMap();
+    let fibonacci = createFibonacciWithWeakMap();
     expect(fibonacci(2)).toBe(1);
     expect(fibonacci(3)).toBe(2);
     expect(fibonacci(4)).toBe(3);
     expect(fibonacci(5)).toBe(5);
     expect(fibonacci(6)).toBe(8);
     expect(fibonacci(7)).toBe(13);
+
+    fibonacci = createFibonacciWithWeakMap();
+    expect(fibonacci(7)).toBe(13);
+    expect(fibonacci(6)).toBe(8);
+    expect(fibonacci(5)).toBe(5);
+    expect(fibonacci(4)).toBe(3);
+    expect(fibonacci(3)).toBe(2);
+    expect(fibonacci(2)).toBe(1);
   });
 
   it("should work with high numbers", () => {
